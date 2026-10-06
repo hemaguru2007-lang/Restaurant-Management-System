@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Table Reservation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Foodie Restaurant
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="menu.html">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reservation.html">
+                        Reservation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+            <h2>Reserve Your Table</h2>
+
+
+            <form id="reservationForm">
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Your Name"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+
+                <input
+                    type="time"
+                    id="time"
+                    required
+                >
+
+
+                <input
+                    type="number"
+                    id="guests"
+                    placeholder="Number of Guests"
+                    min="1"
+                    required
+                >
+
+
+                <select id="tableNumber" required>
+
+                    <option value="">
+                        Select Table
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Reserve Table
+                </button>
+
+            </form>
+
+
+            <p id="reservationMessage"></p>
+
+        </div>
+
+    </section>
+
+
+    <script src="reservation.js"></script>
+
+</body>
+
+</html>

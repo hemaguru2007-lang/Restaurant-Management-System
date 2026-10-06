@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurant Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                Foodie Restaurant
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Foodie Restaurant</h1>
+
+            <p>
+                Reserve your table and order your favorite food
+                easily and quickly.
+            </p>
+
+            <a href="#reservation" class="btn">
+                Reserve a Table
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu Section -->
+    <section id="menu">
+
+        <h2>Our Menu</h2>
+
+        <div class="menu-container">
+
+            <div class="menu-card">
+                <h3>Pizza</h3>
+                <p>Cheese Pizza</p>
+                <h4>₹250</h4>
+                <button onclick="addToCart('Pizza', 250)">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>Burger</h3>
+                <p>Chicken Burger</p>
+                <h4>₹180</h4>
+                <button onclick="addToCart('Burger', 180)">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>Biryani</h3>
+                <p>Chicken Biryani</p>
+                <h4>₹220</h4>
+                <button onclick="addToCart('Biryani', 220)">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="menu-card">
+                <h3>Pasta</h3>
+                <p>White Sauce Pasta</p>
+                <h4>₹200</h4>
+                <button onclick="addToCart('Pasta', 200)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Reservation Section -->
+    <section id="reservation">
+
+        <h2>Reserve Your Table</h2>
+
+        <form id="reservationForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <input
+                type="time"
+                id="time"
+                required
+            >
+
+            <input
+                type="number"
+                id="guests"
+                placeholder="Number of Guests"
+                min="1"
+                required
+            >
+
+            <button type="submit">
+                Reserve Table
+            </button>
+
+        </form>
+
+        <p id="reservationMessage"></p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📍 Chennai, Tamil Nadu</p>
+        <p>📞 +91 123456789</p>
+        <p>📧 foodie@gmail.com</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Foodie Restaurant. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
