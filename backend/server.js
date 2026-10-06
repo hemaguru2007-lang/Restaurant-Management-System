@@ -1,5 +1,8 @@
 require("dotenv").config();
 
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -40,7 +43,7 @@ const transporter = nodemailer.createTransport({
 // MONGODB CONNECTION
 // ==========================================
 
-mongoose.connect("mongodb://127.0.0.1:27017/restaurantDB")
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("MongoDB connected successfully");
     })
@@ -842,10 +845,8 @@ app.post("/api/orders", async (req, res) => {
 // START SERVER
 // ==========================================
 
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000;
 
-    console.log(
-        "Server running on http://localhost:5000"
-    );
-
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
